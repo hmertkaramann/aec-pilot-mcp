@@ -1,166 +1,137 @@
-<p align="center">
-  <a href="https://hmktools.com/revit-mcp">
-    <img src="assets/banner.png" alt="HMK Pilot — MCP for Revit, AutoCAD, Civil 3D & Navisworks" width="820">
-  </a>
-</p>
-
-<h1 align="center">HMK Pilot — MCP for Revit, AutoCAD, Civil 3D &amp; Navisworks</h1>
+<h1 align="center">AEC Pilot — MCP for Revit, AutoCAD, Civil 3D, Navisworks and more</h1>
 
 <p align="center">
-  Drive your Autodesk apps from any MCP client, in plain language.
+  Let your AI assistant read and edit the model that is open in your Autodesk app, in plain language.
 </p>
 
 <p align="center">
-  <a href="https://hmktools.com"><img alt="Website" src="https://img.shields.io/badge/website-hmktools.com-021E45"></a>
-  <a href="https://hmktools.com/revit-mcp"><img alt="Guide" src="https://img.shields.io/badge/guide-Revit%20MCP-5b9bf0"></a>
-  <img alt="Apps" src="https://img.shields.io/badge/Autodesk-Revit%20%C2%B7%20AutoCAD%20%C2%B7%20Civil%203D%20%C2%B7%20Navisworks-021E45">
-  <img alt="License" src="https://img.shields.io/badge/license-commercial%20(free%20trial)-informational">
-  <a href="https://glama.ai/mcp/servers/hmertkaramann/hmk-pilot-mcp"><img alt="Listed on Glama" src="https://img.shields.io/badge/listed%20on-Glama-5b9bf0"></a>
+  <a href="https://www.aecpilot.com/mcp"><img alt="Website" src="https://img.shields.io/badge/website-aecpilot.com-021E45"></a>
+  <img alt="Apps" src="https://img.shields.io/badge/Autodesk-8%20apps-021E45">
+  <img alt="MCP Registry" src="https://img.shields.io/badge/MCP%20Registry-com.aecpilot%2Faec--pilot-5b9bf0">
+  <img alt="License" src="https://img.shields.io/badge/license-commercial%20(14--day%20free%20trial)-informational">
 </p>
 
 ---
 
-**HMK Pilot** runs a secure local MCP server **inside** your Autodesk application
-and exposes **340+ real actions**, so an AI assistant can read and edit the *live*
-model in plain language — not a stale export.
+**AEC Pilot** runs a local MCP server **inside** each Autodesk application on your
+PC and gives your AI assistant **480+ actions** on the open model or drawing.
+Claude, ChatGPT, Cursor or any other MCP client works on the live model instead of
+only giving advice.
 
-> Part of **[HMK Tools](https://hmktools.com)**.
-> Full guide: **[hmktools.com/revit-mcp](https://hmktools.com/revit-mcp)** ·
-> Comparison: **[vs other Revit MCP options](https://hmktools.com/revit-mcp-comparison)**
+> This repository is the public overview. The server ships inside the AEC Pilot
+> add-in. Full guide: **[aecpilot.com/mcp](https://www.aecpilot.com/mcp)**
 
 ## What it does
 
-- **Revit** — 100+ actions: select elements, edit parameters, create sheets, tag
-  views, run clash checks, export IFC/NWC, drive Dynamo, and more. Also a
-  built-in chat panel.
-- **AutoCAD** — 80+ actions: draw & modify geometry, manage layers, blocks &
-  xrefs, layouts and plotting to PDF.
-- **Civil 3D** — 50+ additional actions: alignments, profiles, surfaces,
-  corridors, pipe networks, sample lines & section views, COGO points.
-- **Navisworks** — 90+ actions: search sets, clash detection, TimeLiner 4D,
-  quantification, viewpoints, federation (append / merge / refresh / publish).
-- Runs **100% locally** (bound to `localhost`) — your models and drawings never
-  leave your machine.
-- Optional Roslyn escape hatch — `execute_revit_code`, `execute_autocad_code`,
-  `execute_civil_code`, `execute_navisworks_code` (toggle off in
-  Settings → Security).
+- **Revit**: select and edit elements and parameters, create sheets and views,
+  tag, run clash checks, export IFC, drive Dynamo.
+- **AutoCAD**: draw and modify geometry, layers, blocks, layouts, plot to PDF.
+- **Civil 3D**: alignments, profiles, surfaces, corridors, pipe networks, sample
+  lines and section views, COGO points.
+- **Advance Steel**: read and edit the steel model.
+- **Navisworks**: search sets, clash detection, TimeLiner 4D, quantification,
+  viewpoints, append / merge / refresh / publish.
+- **Inventor**: parts, sketches and features, assemblies, iLogic, drawings, BOM.
+- **3ds Max**: scene objects, modifiers, materials, cameras and lights, rendering.
+- **Robot Structural Analysis**: nodes, bars, supports, loads, analysis and results.
+
+Every app also has an optional code tool (for example `execute_revit_code`) for
+anything the fixed actions do not cover. You can switch it off in Settings.
 
 ## Works with your assistant
 
-Pilot AI speaks plain MCP, so anything that does will work. These are detected
-and configured for you, one click each:
+AEC Pilot speaks plain MCP, so any MCP client works. These are set up for you in
+one click from **Settings → Setup Guide**:
 
 | Client | Config |
 |---|---|
-| **Claude Desktop** | JSON (both config locations) |
+| **Claude Desktop** | JSON |
 | **Claude Code** | JSON |
 | **ChatGPT / Codex** | TOML |
 | **Cursor** | JSON |
 | **Google Antigravity** | JSON |
 
-Setup scans for the clients you actually have installed and writes only to
-those. **Any MCP servers already in your config are preserved** — the writer
-merges rather than replaces, and reports how many entries it left alone.
+Setup writes only to the clients you have installed, and **keeps the MCP servers
+already in your config**.
 
-Running more than one Autodesk app, or several instances of the same one? Turn
-on the **3-slot pool** and each instance gets its own server entry, so the
-assistant can tell them apart instead of racing for a single port.
+Running more than one Autodesk app, or two copies of the same one? Each copy gets
+its own server entry, so the assistant can tell them apart.
 
-## Built-in domain knowledge
+The assistant can also call `get_knowledge_template` for checked API notes and
+step-by-step recipes for each app, instead of guessing.
 
-The connectors ship a knowledge base the assistant can pull on demand through
-`get_knowledge_template` — verified API notes, workflow recipes, unit tables and
-safety rules per application. It means the assistant reaches for a checked
-pattern instead of guessing an API member and burning a round on the error.
+## Privacy
 
-It also **learns from your machine**. When a code call fails and a later one
-succeeds, the working snippet and the error it stopped hitting are saved
-locally, then offered back on similar work — including in a *later* session, and
-across both the MCP server and the in-app chat panel. Nothing about this leaves
-your computer.
-
-## Workflow skills
-
-The [`skills/`](skills) folder is part of the workflow knowledge HMK Pilot ships
-with each app — auditing a model, laying out sheets, running clash tests,
-building a TimeLiner schedule, what to confirm before a destructive change, and
-how to report results back:
-[Revit](skills/revit) · [AutoCAD / Civil 3D](skills/autocad-civil3d) ·
-[Navisworks](skills/navisworks).
-
-With the connector attached there is nothing to install: the assistant already
-pulls these on demand through `get_knowledge_template`. Each file also carries
-`name` / `description` frontmatter, so it loads as a Claude Skill (in Claude
-Code, save it as `~/.claude/skills/<name>/SKILL.md`) — but they are written
-against HMK Pilot's tool names, so they **only work while the HMK Pilot
-connector is connected**.
+- The server listens on **localhost only**. Your models and drawings stay on your
+  machine.
+- AEC Pilot does not send your model anywhere. Your AI client sends what it reads
+  to your own AI provider, under your own account.
+- Privacy policy: <https://www.aecpilot.com/privacy>
 
 ## Requirements
 
-- Windows (x64)
-- Autodesk **Revit 2023–2027**, **AutoCAD / Civil 3D 2021–2027**, and/or
-  **Navisworks Manage / Simulate 2023–2027**
-- An MCP client from the table above (bring your own AI account)
-- An **HMK Tools license** — free 14-day trial, no card
-  ([pricing](https://hmktools.com/pricing))
+- Windows 10 / 11, 64-bit
+- One or more of: **Revit 2023–2027**, **AutoCAD / Civil 3D 2021–2027**,
+  **Advance Steel 2024–2027**, **Navisworks Manage / Simulate 2023–2027**,
+  **Inventor 2027**, **3ds Max 2024–2027**, **Robot Structural Analysis 2024–2027**
+- An MCP client (bring your own AI account)
+- An **AEC Pilot licence**: free 14-day trial, no card
+  ([pricing](https://www.aecpilot.com/pricing))
 
 > No Node.js, no Python, no separate runtime. The local bridge is a single
-> native executable that ships with the add-in.
+> executable that ships with the add-in.
 
 ## Install
 
-1. Download & install **HMK Tools** from
-   **[hmktools.com/install](https://hmktools.com/install)**.
-2. In Revit / AutoCAD / Civil 3D / Navisworks, open the **HMK Tools → Pilot AI**
-   ribbon and toggle the **Connector** on.
-3. Open **Settings → Setup Guide**, find your assistant in the list and click
-   **Configure** — done. Restart the client so it picks up the new server.
+1. Download the installer from **[aecpilot.com/install](https://www.aecpilot.com/install)**.
+   It finds your Autodesk apps and adds AEC Pilot only to the ones you choose.
+2. Start the app, open the **AEC Pilot** tab, click **Activate** and paste the
+   username and licence key from your account.
+3. Open **Settings → Setup Guide**, pick your assistant and click the setup
+   button. Restart the assistant so it loads the new server.
 
-Step-by-step with screenshots:
-**[Getting started](https://hmktools.com/docs/getting-started)** ·
-**[Connect a client](https://hmktools.com/docs/connect)**.
+Step by step: **[Getting started](https://www.aecpilot.com/docs/getting-started)** ·
+**[Connect your AI client](https://www.aecpilot.com/docs/connect)**
 
 ## Docs
 
-- Getting started: <https://hmktools.com/docs/getting-started>
-- Connect an MCP client: <https://hmktools.com/docs/connect>
-- Asking for what you want: <https://hmktools.com/docs/how-to-ask>
-- Troubleshooting: <https://hmktools.com/docs/troubleshooting>
-- Per app — Revit: <https://hmktools.com/docs/revit> ·
-  AutoCAD / Civil 3D: <https://hmktools.com/docs/autocad> ·
-  Navisworks: <https://hmktools.com/docs/navisworks>
+- Getting started: <https://www.aecpilot.com/docs/getting-started>
+- Connect an MCP client: <https://www.aecpilot.com/docs/connect>
+- How to ask: <https://www.aecpilot.com/docs/how-to-ask>
+- Troubleshooting: <https://www.aecpilot.com/docs/troubleshooting>
+- What changed, release by release: <https://www.aecpilot.com/changelog>
 
-## Learn more
+## MCP guides per app
 
-- How Revit MCP works: <https://hmktools.com/revit-mcp>
-- AutoCAD & Civil 3D MCP: <https://hmktools.com/autocad-mcp>
-- Navisworks + AI: <https://hmktools.com/navisworks-ai>
-- Compare the options: <https://hmktools.com/revit-mcp-comparison>
-- AI in Revit (guide): <https://hmktools.com/blog/ai-in-revit>
-- Revit connector: <https://hmktools.com/toolbox/pilot-ai-revit>
-- AutoCAD & Civil 3D connector: <https://hmktools.com/toolbox/pilot-cad>
-- Navisworks connector: <https://hmktools.com/toolbox/navis-pilot>
-- What changed, release by release: <https://hmktools.com/changelog>
+[Revit](https://www.aecpilot.com/revit-mcp) ·
+[AutoCAD & Civil 3D](https://www.aecpilot.com/autocad-mcp) ·
+[Civil 3D AI](https://www.aecpilot.com/civil-3d-ai) ·
+[Advance Steel](https://www.aecpilot.com/advance-steel-mcp) ·
+[Navisworks](https://www.aecpilot.com/navisworks-ai) ·
+[Inventor](https://www.aecpilot.com/inventor-mcp) ·
+[3ds Max](https://www.aecpilot.com/3ds-max-mcp) ·
+[Robot](https://www.aecpilot.com/robot-mcp) ·
+[Dynamo AI](https://www.aecpilot.com/dynamo-ai)
 
-## More from HMK Tools
+## More than MCP
 
-HMK Pilot is one part of a 28-tool suite for Revit, AutoCAD, Civil 3D and
-Navisworks — parameter automation, rebar, modeling, batch export and more.
-Browse them all at **[hmktools.com/toolbox](https://hmktools.com/toolbox)**.
+The same licence includes the rest of the AEC Pilot suite: a built-in chat panel
+in each app, plus add-ins for parameters, rebar, modelling, batch export and more.
+See **[aecpilot.com/toolbox](https://www.aecpilot.com/toolbox)**.
 
 ## Questions
 
-This repository is an overview, not the source — issues here are welcome, but
-the fastest route to a person is
-**[hmktools.com/contact](https://hmktools.com/contact)**.
+Issues here are welcome, but the fastest way to reach a person is
+**[aecpilot.com/contact](https://www.aecpilot.com/contact)** or info@aecpilot.com.
 
 ## License
 
-Commercial — included with an **HMK Tools** license (free 14-day trial). This
-repository is the public overview for the HMK Pilot MCP server; the server itself
-ships inside the HMK Tools add-in.
+Commercial. AEC Pilot is licensed per seat per year (free 14-day trial). See
+[LICENSE](LICENSE) and the [terms of service](https://www.aecpilot.com/terms-of-service).
 
 ---
 
-<sub>Revit, AutoCAD, Civil 3D and Navisworks are trademarks of Autodesk, Inc. HMK
-Tools is not affiliated with, endorsed by, or sponsored by Autodesk.</sub>
+<sub>AEC Pilot is made by 7Dimensions OÜ, Tallinn, Estonia. Revit, AutoCAD,
+Civil 3D, Advance Steel, Navisworks, Inventor, 3ds Max and Robot Structural
+Analysis are trademarks of Autodesk, Inc. AEC Pilot is not affiliated with,
+endorsed by, or sponsored by Autodesk.</sub>
