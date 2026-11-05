@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.aecpilot.com/mcp"><img alt="Website" src="https://img.shields.io/badge/website-aecpilot.com-021E45"></a>
+  <a href="https://www.aecpilot.com/mcp-guides"><img alt="Website" src="https://img.shields.io/badge/website-aecpilot.com-021E45"></a>
   <img alt="Apps" src="https://img.shields.io/badge/Autodesk-9%20apps-021E45">
   <img alt="MCP Registry" src="https://img.shields.io/badge/MCP%20Registry-com.aecpilot%2Faec--pilot-5b9bf0">
   <img alt="License" src="https://img.shields.io/badge/license-commercial%20(14--day%20free%20trial)-informational">
@@ -19,7 +19,7 @@ Claude, ChatGPT, Cursor or any other MCP client works on the live model instead 
 only giving advice.
 
 > This repository is the public overview. The server ships inside the AEC Pilot
-> add-in. Full guide: **[aecpilot.com/mcp](https://www.aecpilot.com/mcp)**
+> add-in. Full guide: **[aecpilot.com/mcp-guides](https://www.aecpilot.com/mcp-guides)**
 
 ## What it does
 
