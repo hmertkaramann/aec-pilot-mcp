@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "revit": {
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/server/start.ps1", "-App", "revit"],
+      "env": { "AEC_PROFILE": "pilot", "AEC_PILOT_URL": "http://localhost:7823/", "AEC_PILOT_SELECTOR": "a" }
+    },
+    "autocad": {
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/server/start.ps1", "-App", "autocad"],
+      "env": { "AEC_PROFILE": "cad", "AEC_CAD_URL": "http://localhost:7900/" }
+    },
+    "navisworks": {
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/server/start.ps1", "-App", "navisworks"],
+      "env": { "AEC_PROFILE": "navis", "AEC_NAVIS_URL": "http://localhost:7950/", "AEC_NAVIS_SELECTOR": "a" }
+    },
+    "inventor": {
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/server/start.ps1", "-App", "inventor"],
+      "env": { "AEC_PROFILE": "inventor", "AEC_INVENTOR_URL": "http://localhost:8000/" }
+    },
+    "fusion": {
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/server/start.ps1", "-App", "fusion"],
+      "env": { "AEC_PROFILE": "fusion", "AEC_FUSION_URL": "http://localhost:8150/" }
+    },
+    "3dsmax": {
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/server/start.ps1", "-App", "3dsmax"],
+      "env": { "AEC_PROFILE": "max", "AEC_MAX_URL": "http://localhost:8050/" }
+    },
+    "robot": {
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "${CLAUDE_PLUGIN_ROOT}/server/start.ps1", "-App", "robot"],
+      "env": { "AEC_PROFILE": "robot", "AEC_ROBOT_URL": "http://localhost:8100/" }
+    }
+  }
+}

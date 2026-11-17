@@ -1,0 +1,19 @@
+AEC Pilot plugin for Claude — Proprietary / Commercial License
+
+Copyright (c) 2026 7Dimensions OÜ. All rights reserved.
+
+This plugin folder (the manifest, the MCP server list, the launcher script and
+the skill) connects an AI client to the AEC Pilot add-ins installed on the same
+PC. You may install and use it free of charge together with AEC Pilot. AEC Pilot
+itself is commercial software, licensed (not sold) to end users under a paid
+AEC Pilot licence; a free 14-day trial is available.
+
+You may not copy, redistribute, sublicense, reverse engineer, or use the AEC
+Pilot software except under a valid AEC Pilot licence. See
+https://www.aecpilot.com and https://www.aecpilot.com/terms-of-service for the
+full terms.
+
+Revit, AutoCAD, Civil 3D, Advance Steel, Navisworks, Inventor, Fusion, 3ds Max
+and Robot Structural Analysis are trademarks of Autodesk, Inc. AEC Pilot is not
+affiliated with, endorsed by, or sponsored by Autodesk. Claude is a trademark of
+Anthropic, PBC.

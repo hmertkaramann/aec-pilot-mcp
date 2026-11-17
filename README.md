@@ -79,6 +79,18 @@ its own server entry, so the assistant can tell them apart.
 The assistant can also call `get_knowledge_template` for checked API notes and
 step-by-step recipes for each app, instead of guessing.
 
+### Claude plugin
+
+The [`aec-pilot`](aec-pilot) folder is a Claude plugin: the AEC Pilot servers
+plus a skill that teaches Claude the safe order of work in a live model. In
+Claude Code:
+
+```
+/plugin install aec-pilot --marketplace hmertkaramann/aec-pilot-mcp
+```
+
+It needs AEC Pilot installed on the same PC. See [its README](aec-pilot/README.md).
+
 ## Privacy
 
 - The server listens on **localhost only**. Your models and drawings stay on your

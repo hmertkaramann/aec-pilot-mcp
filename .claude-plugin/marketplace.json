@@ -1,0 +1,17 @@
+{
+  "name": "aec-pilot",
+  "owner": {
+    "name": "7Dimensions OÜ",
+    "email": "info@aecpilot.com"
+  },
+  "metadata": {
+    "description": "AEC Pilot plugins for Claude: connect Claude to Revit, AutoCAD, Civil 3D, Navisworks and more through the AEC Pilot add-in."
+  },
+  "plugins": [
+    {
+      "name": "aec-pilot",
+      "source": "./aec-pilot",
+      "description": "Work on the model that is open in Revit, AutoCAD, Civil 3D, Advance Steel, Navisworks, Inventor, Fusion, 3ds Max or Robot Structural Analysis through the AEC Pilot add-in."
+    }
+  ]
+}
