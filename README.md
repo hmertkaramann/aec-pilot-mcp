@@ -91,6 +91,14 @@ Claude Code:
 
 It needs AEC Pilot installed on the same PC. See [its README](aec-pilot/README.md).
 
+### Cursor
+
+[`.mcp.json`](.mcp.json) at the repo root lists the seven AEC Pilot servers for
+Cursor. Each one starts the bridge (`aec-mcp-bridge.exe`) that the AEC Pilot
+installer puts on your PC, at its default install path. You don't have to copy it
+by hand: the Setup Guide in AEC Pilot writes the same entries to
+`%USERPROFILE%\.cursor\mcp.json` in one click and keeps the servers you already have.
+
 ## Privacy
 
 - The server listens on **localhost only**. Your models and drawings stay on your

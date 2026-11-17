@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "aec-pilot": {
+      "command": "C:\\Program Files\\7Dimensions\\AEC Pilot\\aec-mcp-bridge.exe",
+      "args": [],
+      "env": {
+        "AEC_PROFILE": "pilot",
+        "AEC_PILOT_URL": "http://localhost:7823/"
+      }
+    },
+    "aec-cad": {
+      "command": "C:\\Program Files\\Autodesk\\ApplicationPlugins\\AECPilot.AutoCAD.bundle\\Contents\\aec-mcp-bridge.exe",
+      "args": [],
+      "env": {
+        "AEC_PROFILE": "cad",
+        "AEC_CAD_URL": "http://localhost:7900/"
+      }
+    },
+    "aec-navis": {
+      "command": "C:\\ProgramData\\Autodesk\\ApplicationPlugins\\AECPilot.Navisworks.bundle\\Contents\\aec-mcp-bridge.exe",
+      "args": [],
+      "env": {
+        "AEC_PROFILE": "navis",
+        "AEC_NAVIS_URL": "http://localhost:7950/"
+      }
+    },
+    "aec-inventor": {
+      "command": "C:\\Program Files\\7Dimensions\\AEC Pilot\\Inventor\\aec-mcp-bridge.exe",
+      "args": [],
+      "env": {
+        "AEC_PROFILE": "inventor",
+        "AEC_INVENTOR_URL": "http://localhost:8000/"
+      }
+    },
+    "aec-fusion": {
+      "command": "C:\\Program Files\\7Dimensions\\AEC Pilot\\Fusion\\aec-mcp-bridge.exe",
+      "args": [],
+      "env": {
+        "AEC_PROFILE": "fusion",
+        "AEC_FUSION_URL": "http://localhost:8150/"
+      }
+    },
+    "aec-max": {
+      "command": "C:\\ProgramData\\Autodesk\\ApplicationPlugins\\AECPilot.3dsMax.bundle\\Contents\\aec-mcp-bridge.exe",
+      "args": [],
+      "env": {
+        "AEC_PROFILE": "max",
+        "AEC_MAX_URL": "http://localhost:8050/"
+      }
+    },
+    "aec-robot": {
+      "command": "C:\\Program Files\\7Dimensions\\AEC Pilot\\RobotPilot\\aec-mcp-bridge.exe",
+      "args": [],
+      "env": {
+        "AEC_PROFILE": "robot",
+        "AEC_ROBOT_URL": "http://localhost:8100/"
+      }
+    }
+  }
+}

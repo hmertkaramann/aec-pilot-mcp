@@ -1,0 +1,17 @@
+{
+  "name": "aec-pilot",
+  "displayName": "AEC Pilot",
+  "version": "1.0.0",
+  "description": "Work on the model that is open in Revit, AutoCAD, Civil 3D, Advance Steel, Navisworks, Inventor, Fusion, 3ds Max or Robot Structural Analysis. Connects Cursor to the AEC Pilot add-in on your Windows PC over MCP (550+ actions, local only). Requires AEC Pilot (free 14-day trial).",
+  "author": {
+    "name": "7Dimensions OÜ",
+    "email": "info@aecpilot.com",
+    "url": "https://www.aecpilot.com"
+  },
+  "homepage": "https://www.aecpilot.com/mcp-guides",
+  "repository": "https://github.com/hmertkaramann/aec-pilot-mcp",
+  "license": "LicenseRef-AEC-Pilot-Proprietary",
+  "logo": "aec-pilot/logo.png",
+  "keywords": ["revit", "autocad", "civil-3d", "advance-steel", "navisworks", "inventor", "fusion", "3ds-max",
+               "robot-structural-analysis", "autodesk", "bim", "aec", "mcp"]
+}
