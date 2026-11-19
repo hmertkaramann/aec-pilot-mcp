@@ -133,6 +133,15 @@ by hand: the Setup Guide in AEC Pilot writes the same entries to
 Step by step: **[Getting started](https://www.aecpilot.com/docs/getting-started)** ·
 **[Connect your AI client](https://www.aecpilot.com/docs/connect)**
 
+### From the Autodesk App Store
+
+AEC Pilot is also published on Autodesk's own store (publisher 7Dimensions), where the
+Autodesk App Manager installs it:
+
+- [AEC Pilot for Revit](https://marketplace.autodesk.com/apps/64aff156-c166-4dd5-93f4-d79aa0ed3502)
+- [AEC Pilot for Civil 3D and AutoCAD](https://marketplace.autodesk.com/apps/929cb9ac-8beb-42d4-b8c8-d4db1db0b989)
+- [AEC Pilot for Navisworks](https://marketplace.autodesk.com/apps/7c0d4fa4-da5a-422c-8bdb-34f4a1ce8e1e)
+
 ## Docs
 
 - Getting started: <https://www.aecpilot.com/docs/getting-started>
